@@ -1,0 +1,42 @@
+@startuml
+!define ENTITY class
+!define DATABASE package
+!define TABLE { stereotype "Table" }
+
+DATABASE CoffeeDB {
+    ENTITY User {
+        +userId: int
+        username: string
+        email: string
+        password: string
+    }
+
+    ENTITY Coffee {
+        +coffeeId: int
+        name: string
+        description: string
+        price: double
+    }
+
+    ENTITY Order {
+        +orderId: int
+        userId: int
+        coffeeId: int
+        quantity: int
+        totalAmount: double
+        orderDate: date
+    }
+
+    ENTITY Cart {
+        +cartId: int
+        userId: int
+        coffeeId: int
+        quantity: int
+    }
+}
+
+User --|{ Order: "Places" userId
+Order }o--|{ Coffee: "Contains" coffeeId
+Cart --|{ Coffee: "Includes" coffeeId
+
+@enduml

@@ -1,0 +1,19 @@
+.landing-page {
+    min-width: 320px;
+    max-width: 600px;
+}
+
+.landing-page header {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.landing-page header img {
+    aspect-ratio: 1/1;
+    height: 5rem;
+}
+
+.landing-page h3 {
+    color: var(--primary-color);
+}

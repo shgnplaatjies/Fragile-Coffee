@@ -1,0 +1,7 @@
+.page-layout {
+    width: 100%;
+}
+
+.page-layout header {
+    background-color: var(--primary-color);
+}

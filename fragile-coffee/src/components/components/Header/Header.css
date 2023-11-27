@@ -1,0 +1,15 @@
+.header-component {
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.header-component>* {
+    height: 1.5rem;
+}
+
+.header-component .logo{
+    height: 175%;
+}
